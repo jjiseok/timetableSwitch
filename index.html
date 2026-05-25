@@ -50,6 +50,17 @@
     <main class="p-3 max-w-[99%] mx-auto">
         <div id="mobile-result-msg" class="lg:hidden font-medium text-xs text-google-textSecondary mb-2 text-center"></div>
 
+        <section id="drop-zone" class="drop-zone mb-3" role="button" tabindex="0" aria-label="엑셀 시간표 파일 드래그 앤 드롭 또는 파일 선택">
+            <div class="drop-zone-icon">
+                <span class="material-symbols-outlined">upload_file</span>
+            </div>
+            <div class="drop-zone-text">
+                <strong>엑셀 시간표 파일을 여기에 드래그하세요.</strong>
+                <span>.xlsx 또는 .xls 파일을 끌어다 놓거나, 이 영역을 클릭해서 파일을 열 수 있습니다.</span>
+            </div>
+            <div class="drop-zone-badge">드래그 앤 드롭 지원</div>
+        </section>
+
         <div id="panel-2way" class="p-3 mb-3 rounded-md shadow-sm flex flex-col md:flex-row justify-between items-center bg-white transition-all hidden-panel">
             <div id="msg-2way" class="text-google-text text-xs md:text-[13px] mb-3 md:mb-0 leading-relaxed w-full md:w-auto flex-1 md:pr-4"></div>
             <button id="btn-2way" class="flex shrink-0 items-center gap-1.5 bg-white text-google-blue border border-google-border hover:bg-google-blue/5 font-medium px-4 py-1.5 rounded-full shadow-sm transition-colors whitespace-nowrap text-xs hidden">

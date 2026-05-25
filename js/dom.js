@@ -3,6 +3,7 @@ window.App = window.App || {};
 App.initDOM = function initDOM() {
     App.DOM = {
         fileInput: document.getElementById('excel-file'),
+        dropZone: document.getElementById('drop-zone'),
         msgDiv: document.getElementById('result-msg'),
         mobileMsgDiv: document.getElementById('mobile-result-msg'),
         tableWrapper: document.getElementById('table-wrapper'),

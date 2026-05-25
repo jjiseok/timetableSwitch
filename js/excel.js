@@ -3,7 +3,20 @@ window.App = window.App || {};
 App.excel = {
     handleFileUpload(event) {
         const file = event.target.files[0];
+        App.excel.openFile(file);
+        event.target.value = '';
+    },
+
+    openFile(file) {
         if (!file) return;
+
+        const fileName = String(file.name || '').toLowerCase();
+        const isExcelFile = fileName.endsWith('.xlsx') || fileName.endsWith('.xls');
+
+        if (!isExcelFile) {
+            App.messages.show('엑셀 파일(.xlsx, .xls)만 열 수 있습니다.', 'error');
+            return;
+        }
 
         const reader = new FileReader();
         reader.onload = function onLoad(loadEvent) {
@@ -24,8 +37,8 @@ App.excel = {
             }
         };
 
+        App.messages.show(`파일을 불러오는 중입니다: ${file.name}`, 'info');
         reader.readAsArrayBuffer(file);
-        event.target.value = '';
     },
 
     processData(jsonArray) {
